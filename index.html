@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light" data-style="indigo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>歐洲與 OECD 人工智慧（AI）採納與經濟成長研究 — 文獻知識庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Top Navigation Header -->
+  <header class="top-navbar">
+    <div class="brand-area" id="brandHomeBtn" title="回到文獻資料庫首頁">
+      <div class="brand-logo">AI×GDP</div>
+      <div class="brand-text">
+        <h1>歐洲與 OECD 人工智慧採納與經濟成長 — 文獻檢索知識庫</h1>
+      </div>
+    </div>
+
+    <div class="nav-controls">
+      <!-- 3 HTML Visual Style Switcher -->
+      <div class="style-switcher" role="group" aria-label="HTML 視覺樣式選擇">
+        <span class="style-switcher-label">樣式：</span>
+        <button class="style-btn active" data-style-choice="indigo" title="樣式 1：現代深邃靛藍學術風">
+          🎨 1. 現代靛藍
+        </button>
+        <button class="style-btn" data-style-choice="oxford" title="樣式 2：牛津羊皮紙經典期刊襯線風">
+          📜 2. 牛津期刊
+        </button>
+        <button class="style-btn" data-style-choice="obsidian" title="樣式 3：黑曜石極客終端機風">
+          ⚡ 3. 黑曜石極客
+        </button>
+      </div>
+
+      <div class="search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="globalSearchInput" placeholder="搜尋關鍵字（ARDL、專利、人力資本、作者...）" />
+        <button id="clearSearchBtn" class="clear-search-btn hidden" title="清除搜尋">✕</button>
+      </div>
+
+      <button id="themeToggleBtn" class="icon-btn" title="切換深色／淺色模式">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Workspace Container -->
+  <div class="workspace-layout">
+    <!-- Left Sidebar (Clean Category & Synthesis Navigation like original) -->
+    <aside class="sidebar" id="sidebarNav">
+      <div class="sidebar-section">
+        <div class="sidebar-heading">文獻檢索與速覽</div>
+        <button class="nav-item active" data-nav="database">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-label">文獻資料庫首頁 (篩選檢索)</span>
+          <span class="nav-count" id="totalLitCountBadge">22</span>
+        </button>
+        <button class="nav-item" data-nav="summary-table">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">22 篇「假設×變數×模型」總表</span>
+        </button>
+        <button class="nav-item" data-nav="hypothesis-picker">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">候選假設與模型挑選指南</span>
+        </button>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">跨篇綜合統整專頁</div>
+        <button class="nav-item" data-nav="wiki-page" data-page="germany">
+          <span class="nav-icon">📑</span>
+          <span class="nav-label">德國：政策與實證統整</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="netherlands">
+          <span class="nav-icon">📑</span>
+          <span class="nav-label">荷蘭：政策與實證統整</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="denmark">
+          <span class="nav-icon">📑</span>
+          <span class="nav-label">丹麥：政策與實證統整</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="eu-oecd">
+          <span class="nav-icon">📑</span>
+          <span class="nav-label">歐盟與 OECD：跨國統整</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="ai-productivity-and-growth">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">主題：AI 生產力與成長 (H1)</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="country-heterogeneity-and-moderators">
+          <span class="nav-icon">⚖️</span>
+          <span class="nav-label">主題：跨國異質性與調節變數</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="ai-innovation-and-trade">
+          <span class="nav-icon">🚢</span>
+          <span class="nav-label">主題：產業創新與國際貿易</span>
+        </button>
+        <button class="nav-item" data-nav="wiki-page" data-page="methodology-and-variables">
+          <span class="nav-icon">📐</span>
+          <span class="nav-label">主題：計量模型與變數比較</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContentArea">
+      <!-- Populated dynamically by assets/app.js -->
+    </main>
+  </div>
+
+  <script src="assets/wiki-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
